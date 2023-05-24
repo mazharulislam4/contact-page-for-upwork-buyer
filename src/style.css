@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair:wght@400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,500;1,700;1,900&display=swap");
 
+:root {
+  --roboto: "Roboto", sans-serif;
+  --leto: "Lato", sans-serif;
+  --playfair: "Playfair", serif;
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   box-sizing: border-box;
-}
-
-::root {
-  --roboto: "Roboto", sans-serif;
-  --leto: "Lato", sans-serif;
-  --playfair: "Playfair", serif;
 }
 
 p,
@@ -114,9 +114,17 @@ img {
   border-radius: 20px;
   padding: 30px;
   margin-block: 30px;
-  background: #ffffff;
+  background-color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(189, 0, 189, 0.7) 0%,
+    rgba(220, 220, 220, 0.7) 32%,
+    rgba(220, 220, 220, 0.7) 64%,
+    rgba(0, 196, 196, 0.7) 100%
+  );
   background-clip: padding-box; /* !importanté */
   border: solid 3px transparent; /* !importanté */
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
 }
 
 /* .contact-details_wrapper::before {
@@ -162,7 +170,7 @@ img {
   font-size: 1.3rem;
   text-decoration: none;
   font-style: normal;
-  color: #6f6dd6;
+  color: #47477c;
 }
 
 @media (max-width: 768px) {
@@ -194,6 +202,10 @@ img {
 }
 
 @media (max-width: 350px) {
+  .contact-details_wrapper {
+    gap: 10px;
+    padding: 20px;
+  }
   .single-contact_icon {
     width: 2rem;
     height: 2rem;
@@ -226,8 +238,10 @@ img {
 }
 .career-section .heading-style-h5 {
   padding: 0;
+  text-transform: uppercase;
 }
 .career-section .career .career-text p {
+  font-family: var(--roboto);
   max-width: 650px;
   text-align: justify;
   font-size: 1.2rem;
