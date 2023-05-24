@@ -38,10 +38,10 @@ body {
   background: rgb(189, 0, 189);
   background: linear-gradient(
     90deg,
-    rgba(189, 0, 189, 1) 0%,
-    rgba(220, 220, 220, 1) 32%,
-    rgba(220, 220, 220, 1) 64%,
-    rgba(0, 196, 196, 1) 100%
+    rgba(189, 0, 189, 0.7) 0%,
+    rgba(220, 220, 220, 0.7) 32%,
+    rgba(220, 220, 220, 0.7) 64%,
+    rgba(0, 196, 196, 0.7) 100%
   );
   font-family: var(--roboto);
   line-height: 1.5rem;
@@ -115,19 +115,12 @@ img {
   padding: 30px;
   margin-block: 30px;
   background-color: #fff;
-  background: linear-gradient(
-    90deg,
-    rgba(189, 0, 189, 0.7) 0%,
-    rgba(220, 220, 220, 0.7) 32%,
-    rgba(220, 220, 220, 0.7) 64%,
-    rgba(0, 196, 196, 0.7) 100%
-  );
   background-clip: padding-box; /* !importanté */
   border: solid 3px transparent; /* !importanté */
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
 }
 
-/* .contact-details_wrapper::before {
+.contact-details_wrapper::before {
   content: "";
   width: calc(100% + 5px);
   height: calc(100% + 5px);
@@ -147,7 +140,7 @@ img {
     rgb(234, 22, 72) 100%
   );
   border-radius: 20px;
-} */
+}
 
 .single-contact_into {
   grid-row-gap: 1rem;
@@ -586,7 +579,7 @@ textarea.form-input {
 
 .opening-hours-wrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .col-sm-4 {
