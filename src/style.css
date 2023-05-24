@@ -93,7 +93,7 @@ img {
 }
 
 .header-page h1 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   line-height: 3rem;
   font-weight: 700;
   font-family: var(--playfair);
@@ -167,7 +167,7 @@ img {
   font-family: var(--leto);
   font-weight: 500;
   line-height: 1.5rem;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-decoration: none;
   font-style: normal;
   color: #47477c;
@@ -214,6 +214,11 @@ img {
     font-size: 0.9rem;
     width: 100%;
   }
+
+  .header-page h1 {
+    font-size: 1.4rem;
+    line-height: 30px;
+  }
 }
 
 /* careers section  */
@@ -237,6 +242,9 @@ img {
   border-radius: 20px;
 }
 .career-section .heading-style-h5 {
+  font-family: var(--playfair);
+  font-size: 3rem;
+  line-height: 50px;
   padding: 0;
   text-transform: uppercase;
 }
@@ -284,10 +292,35 @@ img {
   transition: background 1s ease;
 }
 
+@media (max-width: 768px) {
+  .career-section .career .btn {
+    font-size: 16px;
+  }
+
+  .career-section .heading-style-h5 {
+    font-family: var(--playfair);
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .career-section .career .career-text p {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 350px) {
   .career-section .career .btn {
-    padding: 10px 13px 10px 12px;
-    font-family: 14px;
+    padding: 8px 10px 8px 10px;
+    font-size: 12px;
+  }
+
+  .career-section .heading-style-h5 {
+    font-family: var(--playfair);
+    font-size: 1.4rem;
+    line-height: 30px;
+  }
+
+  .career-section .career .career-text p {
+    font-size: 0.9rem;
   }
 }
 /* form map  */
@@ -340,7 +373,7 @@ img {
   z-index: 77 !important;
   width: 50%;
   border-radius: 1.5rem;
-  padding: 6rem 2.5rem;
+  padding: 5.2rem 2.5rem;
   position: relative;
   left: -5px;
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
@@ -349,10 +382,9 @@ img {
 
 .heading-style-h5 {
   font-family: var(--playfair);
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 120%;
-  padding-top: 15px;
 }
 
 .form-wrapper {
@@ -435,19 +467,18 @@ textarea.form-input {
 .submit-button-wrapper .btn {
   background: transparent;
   border: none;
-  font-size: 2.2rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: font 0.4s ease;
   cursor: pointer;
   font-family: var(--playfair);
-  font-size: 1.8rem;
   font-weight: 700;
   line-height: 120%;
 }
 
 .submit-button-wrapper .btn:hover {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 
 .submit-button-wrapper .btn-icon {
@@ -497,18 +528,57 @@ textarea.form-input {
     padding: 30px;
   }
 
-  .submit-button-wrapper .btn {
-    font-size: 1.5rem;
-  }
-
-  .submit-button-wrapper .btn:hover {
-    font-size: 1.3rem;
-  }
   .heading-style-h5 {
-    font-size: 1.9rem;
+    font-size: 3rem;
   }
   .contact-map-section {
     padding-block: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading-style-h5 {
+    font-size: 2rem;
+  }
+
+  .form-input {
+    font-size: 1rem;
+  }
+
+  .submit-button-wrapper .btn {
+    font-size: 1.8rem;
+  }
+
+  .submit-button-wrapper .btn:hover {
+    font-size: 1.5rem;
+  }
+
+  .form-input::placeholder,
+  textarea.form-input::placeholder {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .heading-style-h5 {
+    font-size: 1.4rem;
+  }
+
+  .form-input {
+    font-size: 1rem;
+  }
+
+  .submit-button-wrapper .btn {
+    font-size: 1rem;
+  }
+
+  .submit-button-wrapper .btn:hover {
+    font-size: 0.9rem;
+  }
+
+  .form-input::placeholder,
+  textarea.form-input::placeholder {
+    font-size: 0.9rem;
   }
 }
 
@@ -521,15 +591,6 @@ textarea.form-input {
 
 .col-sm-4 {
   width: 33.33%;
-}
-
-@media (max-width: 1024px) {
-  .opening-hours-wrapper {
-    display: block;
-  }
-  .col-sm-4 {
-    width: 100%;
-  }
 }
 
 .list-unstyled.opening-hours {
@@ -591,4 +652,29 @@ textarea.form-input {
 
 .business-hours .opening-hours li.offDay {
   color: #df2121;
+}
+
+@media (max-width: 768px) {
+  .opening-hours-wrapper {
+    display: block;
+  }
+  .col-sm-4 {
+    width: 100%;
+  }
+
+  .business-hours .title {
+    font-size: 1.4rem;
+  }
+  .business-hours li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .business-hours .title {
+    font-size: 1rem;
+  }
+  .business-hours li {
+    font-size: 0.9rem;
+  }
 }
