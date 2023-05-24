@@ -22,6 +22,7 @@ textarea {
 body {
   width: 100%;
   margin-inline: auto;
+  overflow-x: hidden;
 }
 
 img {
@@ -115,13 +116,6 @@ img {
   border-radius: 20px;
 }
 
-@media (max-width: 1024px) {
-  .contact-details_wrapper {
-    flex-direction: column;
-    gap: 40px;
-  }
-}
-
 .single-contact_into {
   grid-row-gap: 1.5rem;
   flex-direction: column;
@@ -144,6 +138,29 @@ img {
   text-decoration: none;
   font-style: normal;
   color: #010048;
+}
+
+@media (max-width: 1024px) {
+  .contact-details_wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .header-page h1 {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+  .single-contact_into {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .single-contact_icon {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
 }
 
 /* form map  */
@@ -278,24 +295,6 @@ textarea.form-input {
   background-image: linear-gradient(90deg, #753bb2, #38acf5);
 }
 
-@media (max-width: 1024px) {
-  .form-map-container {
-    flex-direction: column;
-    gap: 40px;
-    padding: 10px;
-  }
-
-  .map,
-  .contact-form-details {
-    width: 100%;
-    border-radius: 10px;
-  }
-  .contact-form-details {
-    left: 0;
-    margin-inline: auto;
-  }
-}
-
 /* submit button  */
 .submit-button-wrapper {
   position: relative;
@@ -352,6 +351,40 @@ textarea.form-input {
   }
 }
 
+@media (max-width: 1024px) {
+  .form-map-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px;
+  }
+
+  .map,
+  .contact-form-details {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .contact-form-details {
+    left: 0;
+    margin-inline: auto;
+    padding: 10px;
+  }
+
+  .submit-button-wrapper .btn {
+    font-size: 1.5rem;
+  }
+
+  .submit-button-wrapper .btn:hover {
+    font-size: 1.3rem;
+  }
+  .heading-style-h5 {
+    font-size: 1.9rem;
+  }
+  .contact-map-section {
+    padding-block: 70px;
+  }
+}
+
+/* cursor  */
 .cursor {
   width: 11px;
   height: 11px;
