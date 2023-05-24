@@ -19,10 +19,48 @@ textarea {
   margin: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   width: 100%;
   margin-inline: auto;
   overflow-x: hidden;
+  background: rgb(189, 0, 189);
+  background: linear-gradient(
+    90deg,
+    rgba(189, 0, 189, 1) 0%,
+    rgba(220, 220, 220, 1) 32%,
+    rgba(220, 220, 220, 1) 64%,
+    rgba(0, 196, 196, 1) 100%
+  );
+  font-family: Open Sans, sans-serif;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  background: rgb(189, 0, 189);
+  background: linear-gradient(
+    90deg,
+    rgb(25, 232, 198) 0%,
+    rgb(219, 208, 208) 32%,
+    rgba(220, 220, 220, 1) 64%,
+    rgba(0, 196, 196, 1) 100%
+  );
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(50, 24, 105);
+  background: linear-gradient(
+    90deg,
+    rgb(216, 232, 227) 0%,
+    rgb(53, 50, 71) 64%,
+    rgb(194, 228, 232) 100%
+  );
+
+  border-radius: 10px;
 }
 
 img {
@@ -31,7 +69,7 @@ img {
 
 .container {
   width: 100%;
-  max-width: 100rem;
+  max-width: 1400px;
   padding-left: 1rem;
   padding-right: 1rem;
   margin-inline: auto;
@@ -96,8 +134,8 @@ img {
 
 .contact-details_wrapper::before {
   content: "";
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
+  width: calc(100% + 5px);
+  height: calc(100% + 5px);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -105,13 +143,13 @@ img {
   bottom: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  background: rgb(189, 0, 189);
+  background: rgb(0, 189, 183);
   background: linear-gradient(
     90deg,
-    rgba(189, 0, 189, 1) 0%,
-    rgba(220, 220, 220, 1) 32%,
-    rgba(220, 220, 220, 1) 64%,
-    rgba(0, 196, 196, 1) 100%
+    rgb(17, 27, 214) 0%,
+    rgb(13, 184, 218) 32%,
+    rgb(216, 19, 237) 64%,
+    rgb(234, 22, 72) 100%
   );
   border-radius: 20px;
 }
@@ -123,6 +161,7 @@ img {
   align-items: flex-start;
   display: flex;
   z-index: 3;
+  padding: 1rem;
 }
 
 .single-contact_icon {
@@ -144,10 +183,11 @@ img {
   .contact-details_wrapper {
     flex-direction: column;
     gap: 40px;
+    padding: 10px;
   }
 
   .header-page h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 50px;
   }
   .single-contact_into {
@@ -161,8 +201,105 @@ img {
     width: 2.7rem;
     height: 2.7rem;
   }
+  .single-contact_text {
+    font-size: 1.2rem;
+    width: 100%;
+  }
 }
 
+@media (max-width: 350px) {
+  .single-contact_icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  .single-contact_text {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+}
+
+/* careers section  */
+.career-section {
+  padding-block: 120px;
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 500px;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.career-section::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(189, 0, 189, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(189, 0, 189, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 32%,
+    rgba(0, 0, 0, 0.5) 64%,
+    rgba(0, 196, 196, 09) 100%
+  );
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.career-section .career {
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.career-section .career .career-text p {
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-block: 30px;
+  letter-spacing: 1px;
+}
+
+.career-section .career .btn {
+  background-color: rgba(189, 0, 189, 1);
+  background: linear-gradient(
+    90deg,
+    rgba(189, 0, 189, 1) 0%,
+    rgb(60, 72, 107) 32%,
+    rgb(43, 76, 130) 64%,
+    rgba(0, 196, 196, 1) 100%
+  );
+  padding: 10px 20px 10px 20px;
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 10px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+  transition: background 1s ease;
+}
+
+.career-section .career .btn:hover {
+  background: linear-gradient(
+    90deg,
+    rgb(204, 6, 198) 0%,
+    rgb(44, 62, 116) 32%,
+    rgb(26, 63, 124) 64%,
+    rgb(3, 145, 189) 100%
+  );
+  transition: background 1s ease;
+}
 /* form map  */
 
 .contact-map-section {
@@ -207,7 +344,7 @@ img {
 /* contact form  */
 
 .contact-form-details {
-  grid-row-gap: 4rem;
+  grid-row-gap: 2rem;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
@@ -224,9 +361,10 @@ img {
 
 .heading-style-h5 {
   font-family: Orbitron, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 120%;
+  padding-top: 15px;
 }
 
 .form-wrapper {
@@ -307,7 +445,7 @@ textarea.form-input {
 .submit-button-wrapper .btn {
   background: transparent;
   border: none;
-  font-size: 2rem;
+  font-size: 2.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: font 0.4s ease;
@@ -319,7 +457,7 @@ textarea.form-input {
 }
 
 .submit-button-wrapper .btn:hover {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .submit-button-wrapper .btn-icon {
@@ -344,7 +482,7 @@ textarea.form-input {
     transform-style: preserve-3d;
   }
   to {
-    transform: translate3d(40px, -2.5rem, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    transform: translate3d(20px, -1rem, 0px) scale3d(1, 1, 1) rotateX(0deg)
       rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
     opacity: 0;
@@ -386,16 +524,65 @@ textarea.form-input {
 
 /* cursor  */
 .cursor {
-  width: 11px;
-  height: 11px;
+  width: 15px;
+  height: 15px;
   z-index: 66666;
-  background-color: #753bb2;
+  border: 4px solid #b614f1;
   border-radius: 50%;
   position: absolute;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
   animation: cursorAnim 0.5s infinite alternate;
   pointer-events: none;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 4px solid rgb(233, 158, 222);
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -4px;
+  left: -4px;
+  animation: cursorAnim2 0.5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 0.5s forwards;
+  border: 1px solid red;
 }
 
 /* openning hours  */

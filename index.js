@@ -42,3 +42,13 @@ businessHoure.forEach((ele) => {
     ele.classList.add("today");
   }
 });
+
+// document click animation effect 
+
+document.addEventListener('click', () => {
+    cursor.classList.add("expand");
+
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500)
+})

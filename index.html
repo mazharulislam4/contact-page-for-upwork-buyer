@@ -23,7 +23,7 @@
     <main>
       <section class="header-page">
         <h1>Contact Us</h1>
-        <div class="breadcrumb">
+        <!-- <div class="breadcrumb">
           <a href=""> Home</a>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@
             />
           </svg>
           <a href=""> Contact Us</a>
-        </div>
+        </div> -->
       </section>
       <!-- contact section  -->
       <section>
@@ -45,7 +45,7 @@
             <!-- email  -->
             <div class="email single-contact_into">
               <img src="at.svg" alt="email" class="single-contact_icon" />
-              <a href="mailto:web@caprisonline.com" class="single-contact_text"
+              <a href="#form" class="single-contact_text"
                 >web@caprisonline.com</a
               >
             </div>
@@ -63,12 +63,33 @@
                 alt="address"
                 class="single-contact_icon"
               />
-              <address class="single-contact_text">
+              <a href="#map" class="single-contact_text">
                 1401 NW 27th Ave, Ocala, FL 34475
-              </address>
+              </a>
             </div>
 
             <!-- 1401 NW 27th Ave, Ocala, FL 34475 -->
+          </div>
+        </div>
+      </section>
+
+      <!-- career sections  -->
+      <section class="career-section">
+        <div class="container">
+          <div class="career">
+            <div class="career-text">
+              <h2 class="heading-style-h5">Careers</h2>
+              <p>
+                Capris Furniture requires that all applicants submit a fully
+                completed employee application. Kindly download and print out
+                the document, and ensure that every section is thoroughly filled
+                in. Once completed, please send the application via email to
+                web@caprisonline.com, using the subject line "Job Application."
+              </p>
+              <!-- download button  -->
+
+              <a href="#" class="btn">Download Application</a>
+            </div>
           </div>
         </div>
       </section>
@@ -80,7 +101,7 @@
           <!-- map  -->
           <div class="map">
             <div class="mapouter">
-              <div class="gmap_canvas">
+              <div class="gmap_canvas" id="map">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55436.02030199684!2d-95.39782091951267!3d29.72696339157762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640bf066814bf23%3A0x7490877d0192b246!2sHouston%2C%20TX%2077004%2C%20USA!5e0!3m2!1sen!2sbd!4v1675527890734!5m2!1sen!2sbd"
                   width="100%"
@@ -97,10 +118,10 @@
 
           <div class="contact-form-details">
             <h5 class="heading-style-h5 text-color-heading-2">
-              Leave a message
+              Send us a message
             </h5>
             <div class="form-wrapper">
-              <form class="contact-form" aria-label="Form">
+              <form class="contact-form" id="form" aria-label="Form">
                 <div class="contact-form-fields">
                   <div class="contact-form-field-wrapper">
                     <!-- text  -->
