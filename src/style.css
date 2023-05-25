@@ -164,7 +164,7 @@ img {
 @media (max-width: 768px) {
   .contact-details_wrapper {
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     padding: 20px;
   }
 
@@ -173,7 +173,7 @@ img {
     line-height: 50px;
   }
   .single-contact_into {
-    gap: 20px;
+    gap: 10px;
     align-items: center;
     justify-content: center;
   }
