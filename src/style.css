@@ -95,7 +95,7 @@ img {
 
 /* contact details  */
 .contact-details-section {
-  padding-block: 30px;
+  padding-block: 40px;
 }
 .contact-details_wrapper {
   justify-content: space-between;
@@ -165,7 +165,9 @@ img {
   .contact-details_wrapper {
     padding: 20px;
   }
-
+  .contact-details-section {
+    padding-block: 30px;
+  }
   .single-contact_text {
     font-size: 1.1rem;
   }
@@ -225,7 +227,7 @@ img {
 
 /* careers section  */
 .career-section {
-  padding-block: 20px;
+  padding-block: 50px;
   position: relative;
   z-index: 1;
   display: flex;
@@ -282,6 +284,9 @@ img {
 }
 
 @media (max-width: 768px) {
+  .career-section {
+    padding-block: 20px;
+  }
   .career-section .career .btn {
     font-size: 16px;
   }
@@ -315,7 +320,7 @@ img {
 /* form map  */
 
 .contact-map-section {
-  padding-block: 30px;
+  padding-block: 50px;
 }
 
 .form-map-container {
@@ -527,6 +532,9 @@ textarea.form-input {
 }
 
 @media (max-width: 768px) {
+  .contact-map-section {
+    padding-block: 30px;
+  }
   .heading-style-h5 {
     font-size: 2rem;
   }
